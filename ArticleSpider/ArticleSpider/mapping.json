@@ -1,0 +1,61 @@
+{
+  "mappings": {
+    "article": {
+      "properties": {
+        "title_suggest": {
+          "type": "completion"
+        },
+        "title": {
+          "analyzer": "ik_max_word",
+          "search_analyzer": "ik_max_word",
+          "fields": {
+            "title": {
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "id": {
+          "type": "text"
+        },
+        "url": {
+          "type": "text"
+        },
+        "front_image_url": {
+          "type": "text"
+        },
+        "front_image_path": {
+          "type": "text"
+        },
+        "create_date": {
+          "type": "date"
+        },
+        "praise_nums": {
+          "type": "integer"
+        },
+        "comment_nums": {
+          "type": "integer"
+        },
+        "fav_nums": {
+          "type": "integer"
+        },
+        "tags": {
+          "analyzer": "ik_max_word",
+          "fields": {
+            "tags": {
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "content": {
+          "analyzer": "ik_max_word",
+          "type": "text"
+        }
+      }
+    }
+  },
+  "settings": {
+    "analysis": {}
+  }
+}
